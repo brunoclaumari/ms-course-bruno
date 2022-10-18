@@ -1,24 +1,13 @@
-package com.devsuperior.hrworker.entities;
+package com.devsuperior.hrpayroll.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="tb_worker")
 public class Worker implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+	private static final long serialVersionUID = 1L;	
+
 	private Long id;
 	private String name;
 	private Double dailyIncome;
@@ -57,7 +46,7 @@ public class Worker implements Serializable {
 	public void setDailyIncome(Double dailyIncome) {
 		this.dailyIncome = dailyIncome;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -73,9 +62,6 @@ public class Worker implements Serializable {
 			return false;
 		Worker other = (Worker) obj;
 		return Objects.equals(id, other.id);
-	}
-	
-	
-	
+	}	
 
 }
