@@ -1,18 +1,14 @@
-server:
-  port: 8888          
-spring:
-  application:
-    name: hr-config-server
-  cloud:
-    config:
-      server:
-        git:
-          default-label: main
-          uri: git@github.com:brunoclaumari/ms-course-configs.git
-          #ignore-local-ssh-settings: false
-          #strict-host-key-checking: false
-          #search-paths:
-          #- ${GIT_PATH_SSH}
-          username: ${GITHUB_USER}
-          password: ${GITHUB_PASS}
-          #private-key: ${GIT_PRIVATE_KEY_2}
+#server:
+#  port: 8888          
+#spring:
+#  application:
+#    name: hr-config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          default-label: main
+#          uri: https://github.com/brunoclaumari/ms-course-configs
+#          username: ${GITHUB_USER}
+#          password: ${GITHUB_PASS}
+          
