@@ -24,7 +24,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	
 	private static final String[] OPERATOR = {"/hr-worker/**"};
 	
-	private static final String[] ADMIN = {"/hr-payroll/**","/hr-user/**"};
+	private static final String[] ADMIN = {"/hr-payroll/**","/hr-user/**","/hr-worker/actuator/**", "/hr-oauth/actuator/**"};
 	
 	
 	@Override
@@ -38,8 +38,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		.antMatchers(PUBLIC).permitAll()
 		.antMatchers(HttpMethod.GET, OPERATOR).hasAnyRole(OPERATOR_STRING,ADMIN_STRING)
 		.antMatchers(ADMIN).hasRole(ADMIN_STRING)
-		.anyRequest().authenticated();
-		
+		.anyRequest().authenticated();		
 		
 	}
 
